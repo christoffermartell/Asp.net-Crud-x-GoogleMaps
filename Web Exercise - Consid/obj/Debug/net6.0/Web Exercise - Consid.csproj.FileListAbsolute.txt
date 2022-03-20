@@ -1,0 +1,62 @@
+C:\Users\marte\source\repos\Web Exercise - Consid\Web Exercise - Consid\bin\Debug\net6.0\appsettings.Development.json
+C:\Users\marte\source\repos\Web Exercise - Consid\Web Exercise - Consid\bin\Debug\net6.0\appsettings.json
+C:\Users\marte\source\repos\Web Exercise - Consid\Web Exercise - Consid\bin\Debug\net6.0\Web Exercise - Consid.staticwebassets.runtime.json
+C:\Users\marte\source\repos\Web Exercise - Consid\Web Exercise - Consid\bin\Debug\net6.0\Web Exercise - Consid.exe
+C:\Users\marte\source\repos\Web Exercise - Consid\Web Exercise - Consid\bin\Debug\net6.0\Web Exercise - Consid.deps.json
+C:\Users\marte\source\repos\Web Exercise - Consid\Web Exercise - Consid\bin\Debug\net6.0\Web Exercise - Consid.runtimeconfig.json
+C:\Users\marte\source\repos\Web Exercise - Consid\Web Exercise - Consid\bin\Debug\net6.0\Web Exercise - Consid.dll
+C:\Users\marte\source\repos\Web Exercise - Consid\Web Exercise - Consid\bin\Debug\net6.0\Web Exercise - Consid.pdb
+C:\Users\marte\source\repos\Web Exercise - Consid\Web Exercise - Consid\obj\Debug\net6.0\Web Exercise - Consid.csproj.AssemblyReference.cache
+C:\Users\marte\source\repos\Web Exercise - Consid\Web Exercise - Consid\obj\Debug\net6.0\Web Exercise - Consid.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\marte\source\repos\Web Exercise - Consid\Web Exercise - Consid\obj\Debug\net6.0\Web Exercise - Consid.AssemblyInfoInputs.cache
+C:\Users\marte\source\repos\Web Exercise - Consid\Web Exercise - Consid\obj\Debug\net6.0\Web Exercise - Consid.AssemblyInfo.cs
+C:\Users\marte\source\repos\Web Exercise - Consid\Web Exercise - Consid\obj\Debug\net6.0\Web Exercise - Consid.csproj.CoreCompileInputs.cache
+C:\Users\marte\source\repos\Web Exercise - Consid\Web Exercise - Consid\obj\Debug\net6.0\Web Exercise - Consid.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\marte\source\repos\Web Exercise - Consid\Web Exercise - Consid\obj\Debug\net6.0\Web Exercise - Consid.RazorAssemblyInfo.cache
+C:\Users\marte\source\repos\Web Exercise - Consid\Web Exercise - Consid\obj\Debug\net6.0\Web Exercise - Consid.RazorAssemblyInfo.cs
+C:\Users\marte\source\repos\Web Exercise - Consid\Web Exercise - Consid\obj\Debug\net6.0\staticwebassets.build.json
+C:\Users\marte\source\repos\Web Exercise - Consid\Web Exercise - Consid\obj\Debug\net6.0\staticwebassets.development.json
+C:\Users\marte\source\repos\Web Exercise - Consid\Web Exercise - Consid\obj\Debug\net6.0\scopedcss\Views\Shared\_Layout.cshtml.rz.scp.css
+C:\Users\marte\source\repos\Web Exercise - Consid\Web Exercise - Consid\obj\Debug\net6.0\scopedcss\bundle\Web Exercise - Consid.styles.css
+C:\Users\marte\source\repos\Web Exercise - Consid\Web Exercise - Consid\obj\Debug\net6.0\scopedcss\projectbundle\Web Exercise - Consid.bundle.scp.css
+C:\Users\marte\source\repos\Web Exercise - Consid\Web Exercise - Consid\obj\Debug\net6.0\Web Exercise - Consid.dll
+C:\Users\marte\source\repos\Web Exercise - Consid\Web Exercise - Consid\obj\Debug\net6.0\ref\Web Exercise - Consid.dll
+C:\Users\marte\source\repos\Web Exercise - Consid\Web Exercise - Consid\obj\Debug\net6.0\Web Exercise - Consid.pdb
+C:\Users\marte\source\repos\Web Exercise - Consid\Web Exercise - Consid\obj\Debug\net6.0\Web Exercise - Consid.genruntimeconfig.cache
+C:\Users\marte\source\repos\Web Exercise - Consid\Web Exercise - Consid\bin\Debug\net6.0\EntityFramework.dll
+C:\Users\marte\source\repos\Web Exercise - Consid\Web Exercise - Consid\bin\Debug\net6.0\Humanizer.dll
+C:\Users\marte\source\repos\Web Exercise - Consid\Web Exercise - Consid\bin\Debug\net6.0\Microsoft.Data.SqlClient.dll
+C:\Users\marte\source\repos\Web Exercise - Consid\Web Exercise - Consid\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.dll
+C:\Users\marte\source\repos\Web Exercise - Consid\Web Exercise - Consid\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.Abstractions.dll
+C:\Users\marte\source\repos\Web Exercise - Consid\Web Exercise - Consid\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.Design.dll
+C:\Users\marte\source\repos\Web Exercise - Consid\Web Exercise - Consid\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.Relational.dll
+C:\Users\marte\source\repos\Web Exercise - Consid\Web Exercise - Consid\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.SqlServer.dll
+C:\Users\marte\source\repos\Web Exercise - Consid\Web Exercise - Consid\bin\Debug\net6.0\Microsoft.Extensions.Caching.Memory.dll
+C:\Users\marte\source\repos\Web Exercise - Consid\Web Exercise - Consid\bin\Debug\net6.0\Microsoft.Identity.Client.dll
+C:\Users\marte\source\repos\Web Exercise - Consid\Web Exercise - Consid\bin\Debug\net6.0\Microsoft.IdentityModel.JsonWebTokens.dll
+C:\Users\marte\source\repos\Web Exercise - Consid\Web Exercise - Consid\bin\Debug\net6.0\Microsoft.IdentityModel.Logging.dll
+C:\Users\marte\source\repos\Web Exercise - Consid\Web Exercise - Consid\bin\Debug\net6.0\Microsoft.IdentityModel.Protocols.dll
+C:\Users\marte\source\repos\Web Exercise - Consid\Web Exercise - Consid\bin\Debug\net6.0\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+C:\Users\marte\source\repos\Web Exercise - Consid\Web Exercise - Consid\bin\Debug\net6.0\Microsoft.IdentityModel.Tokens.dll
+C:\Users\marte\source\repos\Web Exercise - Consid\Web Exercise - Consid\bin\Debug\net6.0\Microsoft.Win32.SystemEvents.dll
+C:\Users\marte\source\repos\Web Exercise - Consid\Web Exercise - Consid\bin\Debug\net6.0\System.Configuration.ConfigurationManager.dll
+C:\Users\marte\source\repos\Web Exercise - Consid\Web Exercise - Consid\bin\Debug\net6.0\System.Drawing.Common.dll
+C:\Users\marte\source\repos\Web Exercise - Consid\Web Exercise - Consid\bin\Debug\net6.0\System.IdentityModel.Tokens.Jwt.dll
+C:\Users\marte\source\repos\Web Exercise - Consid\Web Exercise - Consid\bin\Debug\net6.0\System.Runtime.Caching.dll
+C:\Users\marte\source\repos\Web Exercise - Consid\Web Exercise - Consid\bin\Debug\net6.0\System.Security.Cryptography.ProtectedData.dll
+C:\Users\marte\source\repos\Web Exercise - Consid\Web Exercise - Consid\bin\Debug\net6.0\System.Security.Permissions.dll
+C:\Users\marte\source\repos\Web Exercise - Consid\Web Exercise - Consid\bin\Debug\net6.0\System.Windows.Extensions.dll
+C:\Users\marte\source\repos\Web Exercise - Consid\Web Exercise - Consid\bin\Debug\net6.0\runtimes\unix\lib\netcoreapp3.1\Microsoft.Data.SqlClient.dll
+C:\Users\marte\source\repos\Web Exercise - Consid\Web Exercise - Consid\bin\Debug\net6.0\runtimes\win\lib\netcoreapp3.1\Microsoft.Data.SqlClient.dll
+C:\Users\marte\source\repos\Web Exercise - Consid\Web Exercise - Consid\bin\Debug\net6.0\runtimes\win-arm\native\Microsoft.Data.SqlClient.SNI.dll
+C:\Users\marte\source\repos\Web Exercise - Consid\Web Exercise - Consid\bin\Debug\net6.0\runtimes\win-arm64\native\Microsoft.Data.SqlClient.SNI.dll
+C:\Users\marte\source\repos\Web Exercise - Consid\Web Exercise - Consid\bin\Debug\net6.0\runtimes\win-x64\native\Microsoft.Data.SqlClient.SNI.dll
+C:\Users\marte\source\repos\Web Exercise - Consid\Web Exercise - Consid\bin\Debug\net6.0\runtimes\win-x86\native\Microsoft.Data.SqlClient.SNI.dll
+C:\Users\marte\source\repos\Web Exercise - Consid\Web Exercise - Consid\bin\Debug\net6.0\runtimes\win\lib\netcoreapp3.0\Microsoft.Win32.SystemEvents.dll
+C:\Users\marte\source\repos\Web Exercise - Consid\Web Exercise - Consid\bin\Debug\net6.0\runtimes\unix\lib\netcoreapp3.0\System.Drawing.Common.dll
+C:\Users\marte\source\repos\Web Exercise - Consid\Web Exercise - Consid\bin\Debug\net6.0\runtimes\win\lib\netcoreapp3.0\System.Drawing.Common.dll
+C:\Users\marte\source\repos\Web Exercise - Consid\Web Exercise - Consid\bin\Debug\net6.0\runtimes\win\lib\netstandard2.0\System.Runtime.Caching.dll
+C:\Users\marte\source\repos\Web Exercise - Consid\Web Exercise - Consid\bin\Debug\net6.0\runtimes\win\lib\netstandard2.0\System.Security.Cryptography.ProtectedData.dll
+C:\Users\marte\source\repos\Web Exercise - Consid\Web Exercise - Consid\bin\Debug\net6.0\runtimes\win\lib\netcoreapp3.0\System.Windows.Extensions.dll
+C:\Users\marte\source\repos\Web Exercise - Consid\Web Exercise - Consid\obj\Debug\net6.0\Web Exercise - Consid.csproj.CopyComplete
+C:\Users\marte\source\repos\Web Exercise - Consid\Web Exercise - Consid\obj\Debug\net6.0\refint\Web Exercise - Consid.dll
