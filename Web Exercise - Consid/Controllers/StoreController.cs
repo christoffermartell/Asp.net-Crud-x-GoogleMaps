@@ -26,12 +26,13 @@ namespace Web_Exercise___Consid.Controllers
             {
                 return await _StoresService.GetAll();
             }
-            catch (Exception)
+            catch (Exception e)
             {
-
-                return BadRequest();
+                Console.WriteLine(e);
+                throw;
             }
 
+             
         }
 
         [HttpGet]
@@ -43,9 +44,9 @@ namespace Web_Exercise___Consid.Controllers
                 var dbStore = _StoresService.GetById(id);
                 return await dbStore;
             }
-            catch (Exception)
+            catch (Exception e)
             {
-
+                Console.WriteLine(e);
                 return BadRequest("Company name not found");
             }
 
@@ -57,19 +58,37 @@ namespace Web_Exercise___Consid.Controllers
         [HttpPost]
         public async Task<ActionResult<List<Stores>>> Add([FromBody]Stores store )
         {
+            try
+            {
             _StoresService.AddStore(store);
 
-            return await _context.Stores.ToListAsync();
+         //   return await _context.Stores.ToListAsync();
+                return Ok(await _context.Stores.ToListAsync());
+
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine(e);
+                throw;
+            }
         }
 
         [HttpDelete("{id}")]
         public async Task<ActionResult<Stores>> Delete(Guid id)
         {
-
+            try
+            {
             var dbStore = _StoresService.GetById(id);
             _StoresService.DeleteStore(await dbStore);
 
             return Ok("Company was deleted.");
+
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine(e);
+                throw;
+            }
 
         }
         [HttpPatch]
@@ -79,18 +98,16 @@ namespace Web_Exercise___Consid.Controllers
             try
             {
                 var dbStore = await _StoresService.GetById(store.Id);
-
-
-
                 _StoresService.UpdateStore(store);
+
                 return Ok(store);
             }
-            catch (Exception)
+            catch (Exception e)
             {
-
+                Console.WriteLine(e);
                 throw;
             }
-            return BadRequest();
+            
             
         }
     }

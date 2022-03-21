@@ -26,9 +26,9 @@ namespace Web_Exercise___Consid.Controllers
             {
                 return await _CompanyService.GetAll();
             }
-            catch (Exception)
+            catch (Exception e)
             {
-
+                Console.WriteLine(e);
                 throw;
             }
             
@@ -37,27 +37,53 @@ namespace Web_Exercise___Consid.Controllers
         [Route("{id}")]
         public async Task<ActionResult<Companies>> GetSpecific(Guid id)
         {
-            var dbCompany = _CompanyService.GetById(id);
-            return await dbCompany;
+            try
+            {
+                   var dbCompany = _CompanyService.GetById(id);
+                   return await dbCompany;
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine(e);
+                throw;
+            }
+            
         
         }
 
         [HttpPost]
         public async Task<ActionResult<List<Companies>>> Add([FromBody] Companies companies)
         {
-            
+            try
+            {
             _CompanyService.AddCompany(companies);
 
             return await _context.Companies.ToListAsync();
+
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine(e);
+                throw;
+            }
         }
 
         [HttpDelete("{id}")]
         public async Task<ActionResult<Companies>> Delete(Guid id)
         {
+            try
+            {
             var dbComapny = _CompanyService.GetById(id);
             _CompanyService.DeleteCompany(await dbComapny);
            
             return Ok("Company was deleted.");
+
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine(e);
+                throw;
+            }
         }
         [HttpPatch]
         public async Task<ActionResult<List<Companies>>> UpdateCompany([FromBody]Companies company)
@@ -69,9 +95,9 @@ namespace Web_Exercise___Consid.Controllers
                 _CompanyService.UpdateCompany(company);
                 return Ok(company);
             }
-            catch (Exception)
+            catch (Exception e)
             {
-
+                Console.WriteLine(e);
                 throw;
             }
             
