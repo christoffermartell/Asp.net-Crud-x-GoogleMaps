@@ -100,7 +100,12 @@ namespace Web_Exercise___Consid.Controllers
                 Console.WriteLine(e);
                 throw;
             }
-            
+
+
+
+          
+
+
 
             return BadRequest();
         }

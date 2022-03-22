@@ -12,13 +12,9 @@ C:\Users\marte\source\repos\Web Exercise - Consid\Web Exercise - Consid\obj\Debu
 C:\Users\marte\source\repos\Web Exercise - Consid\Web Exercise - Consid\obj\Debug\net6.0\Web Exercise - Consid.AssemblyInfo.cs
 C:\Users\marte\source\repos\Web Exercise - Consid\Web Exercise - Consid\obj\Debug\net6.0\Web Exercise - Consid.csproj.CoreCompileInputs.cache
 C:\Users\marte\source\repos\Web Exercise - Consid\Web Exercise - Consid\obj\Debug\net6.0\Web Exercise - Consid.MvcApplicationPartsAssemblyInfo.cache
-C:\Users\marte\source\repos\Web Exercise - Consid\Web Exercise - Consid\obj\Debug\net6.0\Web Exercise - Consid.RazorAssemblyInfo.cache
-C:\Users\marte\source\repos\Web Exercise - Consid\Web Exercise - Consid\obj\Debug\net6.0\Web Exercise - Consid.RazorAssemblyInfo.cs
 C:\Users\marte\source\repos\Web Exercise - Consid\Web Exercise - Consid\obj\Debug\net6.0\staticwebassets.build.json
 C:\Users\marte\source\repos\Web Exercise - Consid\Web Exercise - Consid\obj\Debug\net6.0\staticwebassets.development.json
-C:\Users\marte\source\repos\Web Exercise - Consid\Web Exercise - Consid\obj\Debug\net6.0\scopedcss\Views\Shared\_Layout.cshtml.rz.scp.css
 C:\Users\marte\source\repos\Web Exercise - Consid\Web Exercise - Consid\obj\Debug\net6.0\scopedcss\bundle\Web Exercise - Consid.styles.css
-C:\Users\marte\source\repos\Web Exercise - Consid\Web Exercise - Consid\obj\Debug\net6.0\scopedcss\projectbundle\Web Exercise - Consid.bundle.scp.css
 C:\Users\marte\source\repos\Web Exercise - Consid\Web Exercise - Consid\obj\Debug\net6.0\Web Exercise - Consid.dll
 C:\Users\marte\source\repos\Web Exercise - Consid\Web Exercise - Consid\obj\Debug\net6.0\ref\Web Exercise - Consid.dll
 C:\Users\marte\source\repos\Web Exercise - Consid\Web Exercise - Consid\obj\Debug\net6.0\Web Exercise - Consid.pdb

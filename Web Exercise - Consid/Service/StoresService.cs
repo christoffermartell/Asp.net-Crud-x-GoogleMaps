@@ -14,8 +14,13 @@ namespace Web_Exercise___Consid.Service
         }
         public async Task<Stores> AddStore(Stores Store)
         {
+            if (Store == null)
+            {
+                throw new ArgumentNullException(nameof(Store));
+            }
+
             _context.Stores.Add(Store);
-            _context.SaveChangesAsync();
+          await  _context.SaveChangesAsync();
             return Store;
         }
 
@@ -26,6 +31,8 @@ namespace Web_Exercise___Consid.Service
 
             return store;
         }
+
+      
 
         public async Task<List<Stores>> GetAll()
         {
@@ -55,6 +62,21 @@ namespace Web_Exercise___Consid.Service
                 await _context.SaveChangesAsync();
             }
             return await _context.Stores.FirstOrDefaultAsync(x => x.Id == Store.Id);
+        }
+
+        public async Task<Stores> updateStoreDetails(Guid id, string lat, string lng)
+        {
+            var dbStore = await _context.Stores.FindAsync(id);
+
+            if(dbStore != null)
+            {
+                dbStore.Longitude = lng;
+                dbStore.Latitude = lat;
+
+                _context.Stores.Update(dbStore);
+                await _context.SaveChangesAsync();
+            }
+            return await _context.Stores.FirstOrDefaultAsync(x => x.Id ==id);
         }
     }
 }

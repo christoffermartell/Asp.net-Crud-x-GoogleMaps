@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "lx37XUSHNUFG3s95/tQfxEoH4WLWMa2rRbbH7CG+Rwc=",
+  "Hash": "xdLCMmlZf4i5gCtCeoGY2xCDl1sTrwoUNzLoklkY02I=",
   "Source": "Web Exercise - Consid",
   "BasePath": "_content/Web Exercise - Consid",
   "Mode": "Default",
@@ -16,40 +16,6 @@
     }
   ],
   "Assets": [
-    {
-      "Identity": "C:\\Users\\marte\\source\\repos\\Web Exercise - Consid\\Web Exercise - Consid\\obj\\Debug\\net6.0\\scopedcss\\bundle\\Web Exercise - Consid.styles.css",
-      "SourceId": "Web Exercise - Consid",
-      "SourceType": "Computed",
-      "ContentRoot": "C:\\Users\\marte\\source\\repos\\Web Exercise - Consid\\Web Exercise - Consid\\obj\\Debug\\net6.0\\scopedcss\\bundle\\",
-      "BasePath": "_content/Web Exercise - Consid",
-      "RelativePath": "Web Exercise - Consid.styles.css",
-      "AssetKind": "All",
-      "AssetMode": "CurrentProject",
-      "AssetRole": "Primary",
-      "RelatedAsset": "",
-      "AssetTraitName": "ScopedCss",
-      "AssetTraitValue": "ApplicationBundle",
-      "CopyToOutputDirectory": "Never",
-      "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "C:\\Users\\marte\\source\\repos\\Web Exercise - Consid\\Web Exercise - Consid\\obj\\Debug\\net6.0\\scopedcss\\bundle\\Web Exercise - Consid.styles.css"
-    },
-    {
-      "Identity": "C:\\Users\\marte\\source\\repos\\Web Exercise - Consid\\Web Exercise - Consid\\obj\\Debug\\net6.0\\scopedcss\\projectbundle\\Web Exercise - Consid.bundle.scp.css",
-      "SourceId": "Web Exercise - Consid",
-      "SourceType": "Computed",
-      "ContentRoot": "C:\\Users\\marte\\source\\repos\\Web Exercise - Consid\\Web Exercise - Consid\\obj\\Debug\\net6.0\\scopedcss\\projectbundle\\",
-      "BasePath": "_content/Web Exercise - Consid",
-      "RelativePath": "Web Exercise - Consid.bundle.scp.css",
-      "AssetKind": "All",
-      "AssetMode": "Reference",
-      "AssetRole": "Primary",
-      "RelatedAsset": "",
-      "AssetTraitName": "ScopedCss",
-      "AssetTraitValue": "ProjectBundle",
-      "CopyToOutputDirectory": "Never",
-      "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "C:\\Users\\marte\\source\\repos\\Web Exercise - Consid\\Web Exercise - Consid\\obj\\Debug\\net6.0\\scopedcss\\projectbundle\\Web Exercise - Consid.bundle.scp.css"
-    },
     {
       "Identity": "C:\\Users\\marte\\source\\repos\\Web Exercise - Consid\\Web Exercise - Consid\\wwwroot\\css\\site.css",
       "SourceId": "Web Exercise - Consid",

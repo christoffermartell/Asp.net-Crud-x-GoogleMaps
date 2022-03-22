@@ -12,5 +12,9 @@ namespace Web_Exercise___Consid.Interface
 
         Task<Stores> UpdateStore(Stores store);
         Task<Stores> DeleteStore(Stores store);
+
+        Task<Stores> updateStoreDetails(Guid id, string lat, string lng);
+
+       
     }
 }

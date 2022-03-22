@@ -11,7 +11,7 @@ namespace Web_Exercise___Consid.Controllers
     {
 
         private readonly DataContext _context;
-        private readonly IStores  _StoresService;
+        private readonly IStores _StoresService;
 
         public StoreController(DataContext context, IStores service)
         {
@@ -32,8 +32,27 @@ namespace Web_Exercise___Consid.Controllers
                 throw;
             }
 
-             
+
         }
+
+        [HttpGet]
+        [Route("[Action]{id}")]
+        public async Task<ActionResult<List<Stores>>> GetStoresOfCompany(Guid id)
+        {
+            try
+            {
+                var stores = _context.Stores.Where(x => x.CompanyId == id).ToList();
+                return stores.ToList();
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine(e);
+                throw;
+            }
+
+
+        }
+
 
         [HttpGet]
         [Route("{id}")]
@@ -53,16 +72,17 @@ namespace Web_Exercise___Consid.Controllers
 
         }
 
-       
+
 
         [HttpPost]
-        public async Task<ActionResult<List<Stores>>> Add([FromBody]Stores store )
+        [Route("[Action]")]
+        public async Task<ActionResult<List<Stores>>> AddStore([FromBody] Stores store)
         {
             try
             {
-            _StoresService.AddStore(store);
+                _StoresService.AddStore(store);
 
-         //   return await _context.Stores.ToListAsync();
+                //   return await _context.Stores.ToListAsync();
                 return Ok(await _context.Stores.ToListAsync());
 
             }
@@ -78,10 +98,10 @@ namespace Web_Exercise___Consid.Controllers
         {
             try
             {
-            var dbStore = _StoresService.GetById(id);
-            _StoresService.DeleteStore(await dbStore);
+                var dbStore = _StoresService.GetById(id);
+                _StoresService.DeleteStore(await dbStore);
 
-            return Ok("Company was deleted.");
+                return Ok("Company was deleted.");
 
             }
             catch (Exception e)
@@ -94,7 +114,7 @@ namespace Web_Exercise___Consid.Controllers
         [HttpPatch]
         public async Task<ActionResult<List<Stores>>> UpdateCompany([FromBody] Stores store)
         {
-            
+
             try
             {
                 var dbStore = await _StoresService.GetById(store.Id);
@@ -107,8 +127,24 @@ namespace Web_Exercise___Consid.Controllers
                 Console.WriteLine(e);
                 throw;
             }
-            
-            
+
+
         }
+
+        [HttpPatch]
+        [Route("updateLngLat")]
+        public async Task<ActionResult<Stores>> UpdateLngLat([FromHeader] Guid id, [FromHeader] string lng, [FromHeader] string lat)
+        {
+
+           await _StoresService.updateStoreDetails(id, lng, lat);
+         
+           
+            
+
+       
+            return Ok();
+        }
+
+
     }
 }
