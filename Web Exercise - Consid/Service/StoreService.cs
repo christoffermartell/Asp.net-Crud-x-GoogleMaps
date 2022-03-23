@@ -5,46 +5,52 @@ using Web_Exercise___Consid.Models.Entities;
 
 namespace Web_Exercise___Consid.Service
 {
-    public class StoresService : IStores
+    public class StoreService : IStore
     {
         private readonly DataContext _context;
-        public StoresService(DataContext context)
+        private readonly ICompany _CompanyService;
+        public StoreService(DataContext context,ICompany company)
         {
             _context = context;
+            _CompanyService = company;
         }
-        public async Task<Stores> AddStore(Stores Store)
+        public async Task<Store> AddStore(Store Store)
         {
-            if (Store == null)
+
+            var company = await _CompanyService.GetById(Store.CompanyId);
+            Store.Companies = company;
+
+            if (Store.Companies == null)
             {
                 throw new ArgumentNullException(nameof(Store));
             }
 
             _context.Stores.Add(Store);
-          await  _context.SaveChangesAsync();
+            await  _context.SaveChangesAsync();
             return Store;
         }
 
-        public async Task<Stores> DeleteStore(Stores store)
+        public async Task<Store> DeleteStore(Store store)
         {
             _context.Stores.Remove(store);
-            _context.SaveChangesAsync();
+           await _context.SaveChangesAsync();
 
             return store;
         }
 
       
 
-        public async Task<List<Stores>> GetAll()
+        public async Task<List<Store>> GetAll()
         {
             return await _context.Stores.ToListAsync();
         }
 
-        public async Task<Stores> GetById(Guid id)
+        public async Task<Store> GetById(Guid id)
         {
             return await _context.Stores.FirstOrDefaultAsync(x => x.Id == id);
         }
 
-        public async Task<Stores> UpdateStore(Stores Store)
+        public async Task<Store> UpdateStore(Store Store)
         {
             var dbStore = await _context.Stores.FindAsync(Store.Id);
 
@@ -64,7 +70,7 @@ namespace Web_Exercise___Consid.Service
             return await _context.Stores.FirstOrDefaultAsync(x => x.Id == Store.Id);
         }
 
-        public async Task<Stores> updateStoreDetails(Guid id, string lat, string lng)
+        public async Task<Store> updateStoreDetails(Guid id, string lat, string lng)
         {
             var dbStore = await _context.Stores.FindAsync(id);
 

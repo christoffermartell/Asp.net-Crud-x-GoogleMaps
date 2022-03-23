@@ -4,7 +4,7 @@ using System.ComponentModel.DataAnnotations.Schema;
 namespace Web_Exercise___Consid.Models.Entities
 {
     [Table("Stores")]
-    public class Stores
+    public class Store
     {
         [Column(TypeName = "uniqueidentifier")]
         public Guid Id { get; set; }
@@ -40,13 +40,13 @@ namespace Web_Exercise___Consid.Models.Entities
 
         [Column(TypeName = "nvarchar(15)")]
         [RegularExpression(@"^-?[\.0-9][0-9,\.]+$")]
-        public string Longitude { get; set; }
+        public string? Longitude { get; set; }
 
         [Column(TypeName = "nvarchar(15)")]
         [RegularExpression(@"^-?[\.0-9][0-9,\.]+$")]
-        public string Latitude { get; set; }
+        public string? Latitude { get; set; }
 
-        public virtual Companies Companies { get; set; }
+        public virtual Company? Companies { get; set; }
 
 
     }

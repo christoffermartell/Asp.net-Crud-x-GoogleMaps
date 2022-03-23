@@ -29,9 +29,9 @@ builder.Services.AddDbContext<DataContext>(options =>
 {
     options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection"));
 });
-
-builder.Services.AddScoped<ICompanies, CompaniesService>();
-builder.Services.AddScoped<IStores, StoresService>();
+builder.Services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
+builder.Services.AddScoped<ICompany, CompanyService>();
+builder.Services.AddScoped<IStore, StoreService>();
 
 var app = builder.Build();
 

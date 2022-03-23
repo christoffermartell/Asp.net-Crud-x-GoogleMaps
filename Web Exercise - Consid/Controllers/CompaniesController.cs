@@ -1,113 +1,127 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using AutoMapper;
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Web_Exercise___Consid.Data;
 using Web_Exercise___Consid.Interface;
+using Web_Exercise___Consid.Models.Dtos;
 using Web_Exercise___Consid.Models.Entities;
 
 namespace Web_Exercise___Consid.Controllers
 {
     [Route("api/[controller]")]
+    [ApiController]
     public class CompaniesController : ControllerBase
 
     {
         private readonly DataContext _context;
-        private readonly ICompanies _CompanyService;
-        public CompaniesController(DataContext context, ICompanies service)
+        private readonly ICompany _CompanyService;
+        private readonly ILogger<CompaniesController> _logger;
+        private readonly IMapper _mapper;
+        public CompaniesController(DataContext context, ICompany service,ILogger<CompaniesController> logger,IMapper mapper)
         {
             _context = context;
             _CompanyService = service;
+            _logger = logger;
+            _mapper = mapper;
         }
 
-
+        
         [HttpGet]
-        public async Task<ActionResult<List<Companies>>> Get()
+        public async Task<ActionResult<List<CompanyDto>>> Get()
         {
             try
             {
-                return await _CompanyService.GetAll();
+                var companies = await _CompanyService.GetAll();
+                var companyDto = _mapper.Map<List<CompanyDto>>(companies);
+
+
+                return Ok(companyDto);
             }
-            catch (Exception e)
+            catch (Exception ex)
             {
-                Console.WriteLine(e);
-                throw;
+                _logger.LogError(ex, $"something went wrong in the {nameof(Get)}");
+                return StatusCode(500,("Internal server error. Please try again later"));
+               
             }
             
         }
         [HttpGet]
         [Route("{id}")]
-        public async Task<ActionResult<Companies>> GetSpecific(Guid id)
+        public async Task<ActionResult<CompanyDto>> GetSpecific(Guid id)
         {
             try
             {
-                   var dbCompany = _CompanyService.GetById(id);
-                   return await dbCompany;
+                   var dbCompany = await _CompanyService.GetById(id);
+                    var companyDto = _mapper.Map<CompanyDto>(dbCompany);
+
+                   return Ok(companyDto);
             }
-            catch (Exception e)
+            catch (Exception ex)
             {
-                Console.WriteLine(e);
-                throw;
+                _logger.LogError(ex, $"something went wrong in the {nameof(GetSpecific)}");
+                return StatusCode(500, ("Internal server error. Please try again later"));
             }
             
         
         }
 
         [HttpPost]
-        public async Task<ActionResult<List<Companies>>> Add([FromBody] Companies companies)
+        public async Task<ActionResult<CompanyDto>> Add([FromBody] Company companies)
         {
             try
             {
-            _CompanyService.AddCompany(companies);
+                var newCompany = await _CompanyService.AddCompany(companies);
+                var companyDto = _mapper.Map<CompanyDto>(newCompany);
 
-            return await _context.Companies.ToListAsync();
+                _logger.LogInformation("Company was succesfully created.");
 
+                return Ok(companyDto);
             }
-            catch (Exception e)
+            catch (Exception ex)
             {
-                Console.WriteLine(e);
-                throw;
+                _logger.LogError(ex, $"something went wrong in the {nameof(Add)}");
+                return StatusCode(500, ("Internal server error. Please try again later"));
             }
         }
 
         [HttpDelete("{id}")]
-        public async Task<ActionResult<Companies>> Delete(Guid id)
+        public async Task<ActionResult<Company>> Delete(Guid id)
         {
             try
             {
-            var dbComapny = _CompanyService.GetById(id);
-            _CompanyService.DeleteCompany(await dbComapny);
-           
-            return Ok("Company was deleted.");
+                
+                var dbComapny = _CompanyService.GetById(id);
+                await _CompanyService.DeleteCompany(await dbComapny);
+                _logger.LogInformation("Company was succesfully deleted.");
+
+                return Ok("Company was deleted.");
 
             }
-            catch (Exception e)
+            catch (Exception ex)
             {
-                Console.WriteLine(e);
-                throw;
+                _logger.LogError(ex, $"something went wrong in the {nameof(Delete)}");
+                return StatusCode(500, ("Internal server error. Please try again later"));
             }
         }
         [HttpPatch]
-        public async Task<ActionResult<List<Companies>>> UpdateCompany([FromBody]Companies company)
+        public async Task<ActionResult<CompanyDto>> UpdateCompany([FromBody]Company company)
         {
             try
             {
-                var dbCompany = await _CompanyService.GetById(company.Id);
+                var dbCompany = await _CompanyService.UpdateCompany(company);
+                var companyDto = _mapper.Map<CompanyDto>(dbCompany);
+             
+                _logger.LogInformation("Company was succesfully updated.");
 
-                _CompanyService.UpdateCompany(company);
-                return Ok(company);
+                return Ok(companyDto);
             }
-            catch (Exception e)
+            catch (Exception ex)
             {
-                Console.WriteLine(e);
-                throw;
+                _logger.LogError(ex, $"something went wrong in the {nameof(UpdateCompany)}");
+                return StatusCode(500, ("Internal server error. Please try again later"));
+
             }
 
-
-
-          
-
-
-
-            return BadRequest();
         }
 
     }

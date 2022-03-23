@@ -1,12 +1,14 @@
 {
   "version": 2,
-  "dgSpecHash": "QICzssL4sto2RE3EvSjctaNYsxjZdCdGwWgdHYqTyutF7UzAMkGVwMLJdzIKt18GQr0+KgMUAkJCjQDfxd7YBw==",
+  "dgSpecHash": "I1lbVBYY9yVmWlplQC4f5o7zpwTtCb3mWRst+2r1HqnZbRGJu+f7uotLxKGD20H3BCgenO3jFi9A7NUhZp78yw==",
   "success": true,
   "projectFilePath": "C:\\Users\\marte\\source\\repos\\Web Exercise - Consid\\Web Exercise - Consid\\Web Exercise - Consid.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\marte\\.nuget\\packages\\automapper\\11.0.0\\automapper.11.0.0.nupkg.sha512",
+    "C:\\Users\\marte\\.nuget\\packages\\automapper.extensions.microsoft.dependencyinjection\\11.0.0\\automapper.extensions.microsoft.dependencyinjection.11.0.0.nupkg.sha512",
     "C:\\Users\\marte\\.nuget\\packages\\entityframework\\5.0.0\\entityframework.5.0.0.nupkg.sha512",
     "C:\\Users\\marte\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",
-    "C:\\Users\\marte\\.nuget\\packages\\microsoft.csharp\\4.5.0\\microsoft.csharp.4.5.0.nupkg.sha512",
+    "C:\\Users\\marte\\.nuget\\packages\\microsoft.csharp\\4.7.0\\microsoft.csharp.4.7.0.nupkg.sha512",
     "C:\\Users\\marte\\.nuget\\packages\\microsoft.data.sqlclient\\2.1.4\\microsoft.data.sqlclient.2.1.4.nupkg.sha512",
     "C:\\Users\\marte\\.nuget\\packages\\microsoft.data.sqlclient.sni.runtime\\2.1.1\\microsoft.data.sqlclient.sni.runtime.2.1.1.nupkg.sha512",
     "C:\\Users\\marte\\.nuget\\packages\\microsoft.entityframeworkcore\\6.0.3\\microsoft.entityframeworkcore.6.0.3.nupkg.sha512",

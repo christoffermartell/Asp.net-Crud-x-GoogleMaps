@@ -5,39 +5,45 @@ using Web_Exercise___Consid.Models.Entities;
 
 namespace Web_Exercise___Consid.Service
 {
-    public class CompaniesService : ICompanies
+    public class CompanyService : ICompany
     {
         private readonly DataContext _context;
-        public CompaniesService(DataContext context)
+        
+        public CompanyService(DataContext context )
         {
             _context = context;   
+            
         }
-        public async Task<Companies> AddCompany(Companies company)
+        public async Task<Company> AddCompany(Company company)
         {
-            _context.Companies.Add(company);
-            _context.SaveChangesAsync();
-            return company;
+            
+                _context.Companies.Add(company);
+                await _context.SaveChangesAsync();
+                return company;
+            
         }
 
-        public async Task<Companies> DeleteCompany(Companies company)
+        public async Task<Company> DeleteCompany(Company company)
         {
             _context.Companies.Remove(company);
-            _context.SaveChangesAsync();
+           await _context.SaveChangesAsync();
 
             return  company;
         }
 
-        public async Task<List<Companies>> GetAll()
+        public async Task<List<Company>> GetAll()
         {
             return await _context.Companies.ToListAsync();
         }
 
-        public async Task<Companies> GetById(Guid id)
+        public async Task<Company> GetById(Guid id)
         {
+           
+         
             return await _context.Companies.FirstOrDefaultAsync(x => x.Id == id);
         }
 
-        public async Task<Companies> UpdateCompany(Companies company)
+        public async Task<Company> UpdateCompany(Company company)
         {
             var dbCompnay = await _context.Companies.FindAsync(company.Id);
             if (dbCompnay != null)

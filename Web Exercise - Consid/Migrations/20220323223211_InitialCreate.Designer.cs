@@ -12,8 +12,8 @@ using Web_Exercise___Consid.Data;
 namespace Web_Exercise___Consid.Migrations
 {
     [DbContext(typeof(DataContext))]
-    [Migration("20220319205436_initialMigration")]
-    partial class initialMigration
+    [Migration("20220323223211_InitialCreate")]
+    partial class InitialCreate
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -24,7 +24,7 @@ namespace Web_Exercise___Consid.Migrations
 
             SqlServerModelBuilderExtensions.UseIdentityColumns(modelBuilder, 1L, 1);
 
-            modelBuilder.Entity("Web_Exercise___Consid.Models.Entities.Companies", b =>
+            modelBuilder.Entity("Web_Exercise___Consid.Models.Entities.Company", b =>
                 {
                     b.Property<Guid>("Id")
                         .ValueGeneratedOnAdd()
@@ -32,10 +32,11 @@ namespace Web_Exercise___Consid.Migrations
 
                     b.Property<string>("Name")
                         .IsRequired()
-                        .HasColumnType("nvarchar(255)");
+                        .HasMaxLength(60)
+                        .HasColumnType("nvarchar(60)");
 
                     b.Property<string>("Notes")
-                        .IsRequired()
+                        .HasMaxLength(500)
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<int>("OrganizationNumber")
@@ -44,9 +45,25 @@ namespace Web_Exercise___Consid.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("Companies");
+
+                    b.HasData(
+                        new
+                        {
+                            Id = new Guid("faa9e28f-ad20-498e-9da0-3e56da749c4d"),
+                            Name = "Apple Company",
+                            Notes = "Apple Inc. är ett amerikanskt dator - och hemelektronikföretag grundat 1976 av Steve Jobs, Steve Wozniak och Ronald Wayne. Företaget har cirka 147 000 anställda och omsatte 2020 nästan 274.52 miljarder amerikanska dollar.",
+                            OrganizationNumber = 123321456
+                        },
+                        new
+                        {
+                            Id = new Guid("5989a286-ca8d-48a9-b1d5-d438a6862545"),
+                            Name = "Ikea Company",
+                            Notes = "Ikea Group, av företaget skrivet IKEA Group, är ett multinationellt möbelföretag, som grundades i Sverige år 1943 av Ingvar Kamprad som ett postorderföretag. Företaget ägs av en stiftelse i Nederländerna, men styrs alltjämt av familjen Kamprad.",
+                            OrganizationNumber = 111111332
+                        });
                 });
 
-            modelBuilder.Entity("Web_Exercise___Consid.Models.Entities.Stores", b =>
+            modelBuilder.Entity("Web_Exercise___Consid.Models.Entities.Store", b =>
                 {
                     b.Property<Guid>("Id")
                         .ValueGeneratedOnAdd()
@@ -68,11 +85,9 @@ namespace Web_Exercise___Consid.Migrations
                         .HasColumnType("nvarchar(50)");
 
                     b.Property<string>("Latitude")
-                        .IsRequired()
                         .HasColumnType("nvarchar(15)");
 
                     b.Property<string>("Longitude")
-                        .IsRequired()
                         .HasColumnType("nvarchar(15)");
 
                     b.Property<string>("Name")
@@ -90,9 +105,9 @@ namespace Web_Exercise___Consid.Migrations
                     b.ToTable("Stores");
                 });
 
-            modelBuilder.Entity("Web_Exercise___Consid.Models.Entities.Stores", b =>
+            modelBuilder.Entity("Web_Exercise___Consid.Models.Entities.Store", b =>
                 {
-                    b.HasOne("Web_Exercise___Consid.Models.Entities.Companies", "Companies")
+                    b.HasOne("Web_Exercise___Consid.Models.Entities.Company", "Companies")
                         .WithMany("Stores")
                         .HasForeignKey("CompanyId")
                         .OnDelete(DeleteBehavior.Cascade)
@@ -101,7 +116,7 @@ namespace Web_Exercise___Consid.Migrations
                     b.Navigation("Companies");
                 });
 
-            modelBuilder.Entity("Web_Exercise___Consid.Models.Entities.Companies", b =>
+            modelBuilder.Entity("Web_Exercise___Consid.Models.Entities.Company", b =>
                 {
                     b.Navigation("Stores");
                 });
